@@ -40,9 +40,40 @@ function playStream(idVideoTag,stream){
     video.srcObject = stream;
     video.play();
 }
+
+
+var customConfig;
+  
+// Call XirSys ICE servers
+$.ajax({
+  url: "https://service.xirsys.com/ice",
+  data: {
+    ident: "luongnx512",
+    secret: "06993412-5db5-11e7-a9fd-f11954654461",
+    domain: "luongnx512.github.io",
+    application: "default",
+    room: "default",
+    secure: 1
+  },
+  success: function (data, status) {
+    // data.d is where the iceServers object lives
+    customConfig = data.d;
+    console.log(customConfig);
+  },
+  async: false
+});
+
+
+
 // openStream()
 // .then(stream => playStream("localStream",stream))
-const peer = new Peer({key: 'peerjs',host: 'test-peerjs-server.herokuapp.com',secure: true, port: 443});
+const peer = new Peer({
+    key: 'peerjs',
+    host: 'test-peerjs-server.herokuapp.com/',
+    secure: true, 
+    port: 443,
+    config: customConfig
+   });
 //const peer = new Peer({key: 'n2tak13djk29y66r'});
 
 
