@@ -46,7 +46,7 @@ var customConfig;
   
 // Call XirSys ICE servers
 $.ajax({
-  url: "https://global.xirsys.net",
+  url: "global.xirsys.net",
   data: {
     ident: "luongnx512",
     secret: "06993412-5db5-11e7-a9fd-f11954654461",
