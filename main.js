@@ -44,29 +44,27 @@ function playStream(idVideoTag,stream){
 
 var customConfig;
   
-// Call XirSys ICE servers
-$.ajax({
-  url: "http://global.xirsys.net",
-  data: {
-    ident: "luongnx512",
-    secret: "06993412-5db5-11e7-a9fd-f11954654461",
-    domain: "luongnx512.github.io",
-    application: "default",
-    room: "default",
-    secure: 1
-  },
-  success: function (data, status) {
-    // data.d is where the iceServers object lives
-    customConfig = data.d;
-    console.log(customConfig);
-  },
-  async: false
-});
+// // Call XirSys ICE servers
+// $.ajax({
+//   url: "http://global.xirsys.net",
+//   data: {
+//     ident: "luongnx512",
+//     secret: "06993412-5db5-11e7-a9fd-f11954654461",
+//     domain: "luongnx512.github.io",
+//     application: "default",
+//     room: "default",
+//     secure: 1
+//   },
+//   success: function (data, status) {
+//     // data.d is where the iceServers object lives
+//     customConfig = data.d;
+//     console.log(customConfig);
+//   },
+//   async: false
+// });
 
 
 
-// openStream()
-// .then(stream => playStream("localStream",stream))
 // const peer = new Peer({
 //     key: 'peerjs',
 //     host: 'test-peerjs-server.herokuapp.com/',
