@@ -76,9 +76,7 @@ var customConfig;
 
 
 const peer = new Peer({
-    key: 'n2tak13djk29y66r',
-    secure: true, 
-    port: 443,
+    key: 'n2tak13djk29y66r'
    });
 
 peer.on("open",id => {
