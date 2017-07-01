@@ -67,7 +67,7 @@ var customConfig;
 
 const peer = new Peer({
     key: 'peerjs',
-    host: 'test-peerjs-server.herokuapp.com/',
+    host: 'https://test-peerjs-server.herokuapp.com/',
     secure: true, 
     port: 443,
    });
