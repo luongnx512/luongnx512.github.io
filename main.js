@@ -72,8 +72,14 @@ var customConfig;
 //     port: 443,
 //     config: customConfig
 //    });
-const peer = new Peer({key: 'n2tak13djk29y66r'});
+// const peer = new Peer({key: 'n2tak13djk29y66r'});
 
+
+const peer = new Peer({
+    key: 'n2tak13djk29y66r',
+    secure: true, 
+    port: 443,
+   });
 
 peer.on("open",id => {
     $("#my-peer").append(id);
