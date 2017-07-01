@@ -65,19 +65,18 @@ var customConfig;
 
 
 
-// const peer = new Peer({
-//     key: 'peerjs',
-//     host: 'test-peerjs-server.herokuapp.com/',
-//     secure: true, 
-//     port: 443,
-//     config: customConfig
-//    });
+const peer = new Peer({
+    key: 'peerjs',
+    host: 'test-peerjs-server.herokuapp.com/',
+    secure: true, 
+    port: 443,
+   });
 // const peer = new Peer({key: 'n2tak13djk29y66r'});
 
 
-const peer = new Peer({
-    key: 'n2tak13djk29y66r'
-   });
+// const peer = new Peer({
+//     key: 'n2tak13djk29y66r'
+//    });
 
 peer.on("open",id => {
     $("#my-peer").append(id);
